@@ -156,13 +156,7 @@ NSString *const XCDYouTubeVideoUserInfoKey = @"Video";
 	NSMutableDictionary *userInfo = [NSMutableDictionary new];
 	if (video.title)
 		userInfo[XCDMetadataKeyTitle] = video.title;
-	if (video.smallThumbnailURL)
-		userInfo[XCDMetadataKeySmallThumbnailURL] = video.smallThumbnailURL;
-	if (video.mediumThumbnailURL)
-		userInfo[XCDMetadataKeyMediumThumbnailURL] = video.mediumThumbnailURL;
-	if (video.largeThumbnailURL)
-		userInfo[XCDMetadataKeyLargeThumbnailURL] = video.largeThumbnailURL;
-	
+
 	[[NSNotificationCenter defaultCenter] postNotificationName:XCDYouTubeVideoPlayerViewControllerDidReceiveMetadataNotification object:self userInfo:userInfo];
 #pragma clang diagnostic pop
 	

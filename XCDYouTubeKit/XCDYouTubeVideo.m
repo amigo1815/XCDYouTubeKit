@@ -40,7 +40,7 @@ NSArray <NSDictionary *> *XCDCaptionArrayWithString(NSString *string)
 	
 	if (error) { return nil; }
 	
-	NSArray *thumbnails = JSON[@"videoDetails"]["thumbnail"]["thumbnails"];
+	NSArray *thumbnails = JSON[@"videoDetails"][@"thumbnail"][@"thumbnails"];
 
 	return thumbnails;
 }
