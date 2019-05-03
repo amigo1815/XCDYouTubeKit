@@ -83,6 +83,11 @@ extern NSString *const XCDYouTubeVideoQualityHTTPLiveStreaming;
 @property (nonatomic, readonly, nullable) NSArray *thumbnails;
 
 /**
+ *  Various details. May be nil.
+ */
+@property (nonatomic, readonly, nullable) NSDictionary *details;
+
+/**
  *  A dictionary of video stream URLs.
  *
  *  The keys are the YouTube [itag](https://en.wikipedia.org/wiki/YouTube#Quality_and_formats) values as `NSNumber` objects. The values are the video URLs as `NSURL` objects. There is also the special `XCDYouTubeVideoQualityHTTPLiveStreaming` key for live videos.
